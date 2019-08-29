@@ -1,30 +1,32 @@
 " Vim color file
 " Alucard
-" Created by matuda0113y with ThemeCreator (https://github.com/mswift42/themecreator)
+" Created by matuda0113y with ThemeCreator (https://github.com/mswift42/themecreator) 
+" and adjusted by myself
 
 hi clear
 
 if exists("syntax on")
-syntax reset
+  syntax reset
 endif
 
 set t_Co=256
-let g:colors_name = "alucard"
-
+let g:colors_name = "Alucard"
 
 " Define reusable colorvariables.
-let s:bg="#2e0000"
+"let s:bg="#2e0000"
+let s:bg="#5c0707"
 let s:fg="#b0988e"
 let s:fg2="#a28c83"
 let s:fg3="#948077"
 let s:fg4="#86746c"
-let s:bg2="#3f1414"
+"let s:bg2="#3f1414"
+let s:bg2="#2e0000"
 let s:bg3="#4f2929"
 let s:bg4="#603d3d"
 let s:keyword="#b02742"
 let s:builtin="#b0988e"
-let s:const= "#a100d4"
-let s:comment="#353535"
+let s:const= "#b04ecf"
+let s:comment="#595757"
 let s:func="#8f7b74"
 let s:str="#d4a84d"
 let s:type="#2ad436"
@@ -32,11 +34,16 @@ let s:var="#b0988e"
 let s:warning="#ff0000"
 let s:warning2="#ff8800"
 
-exe 'hi Normal guifg='s:fg' guibg='s:bg 
+let s:white="#ffffff"
+let s:lightgray="#cccccc"
+let s:orange="#ffa500"
+let s:oceanblue="#00aed7"
+
+exe 'hi Normal guifg='s:fg' guibg='s:bg2
 exe 'hi Cursor guifg='s:bg' guibg='s:fg 
-exe 'hi CursorLine  guibg='s:bg2 
-exe 'hi CursorColumn  guibg='s:bg2 
-exe 'hi ColorColumn  guibg='s:bg2 
+exe 'hi CursorLine  guibg='s:bg 'term=bold' 'cterm=bold' 
+exe 'hi CursorColumn  guibg='s:bg 
+exe 'hi ColorColumn  guibg='s:bg
 exe 'hi LineNr guifg='s:fg2' guibg='s:bg2 
 exe 'hi VertSplit guifg='s:fg3' guibg='s:bg3 
 exe 'hi MatchParen guifg='s:warning2'  gui=underline'
@@ -52,7 +59,7 @@ exe 'hi Boolean guifg='s:const
 exe 'hi Character guifg='s:const  
 exe 'hi Comment guifg='s:comment  
 exe 'hi Conditional guifg='s:keyword  
-exe 'hi Constant guifg='s:const  
+exe 'hi Constant guifg='s:white  
 exe 'hi Define guifg='s:keyword  
 exe 'hi DiffAdd guifg=#fafafa guibg=#123d0f gui=bold'
 exe 'hi DiffDelete guibg='s:bg2  
@@ -77,8 +84,15 @@ exe 'hi String guifg='s:str
 exe 'hi Tag guifg='s:keyword  
 exe 'hi Title guifg='s:fg'  gui=bold'
 exe 'hi Todo guifg='s:fg2'  gui=inverse,bold'
-exe 'hi Type guifg='s:type 
+exe 'hi Type guifg='s:oceanblue 
 exe 'hi Underlined   gui=underline'
+
+"My adjustment
+exe 'hi Conditional guifg='s:white
+exe 'hi Repeat guifg='s:lightgray
+exe 'hi Operator guifg='s:lightgray
+exe 'hi Include guifg='s:orange
+exe 'hi Macro guifg='s:str
 
 " Ruby Highlighting
 exe 'hi rubyAttribute guifg='s:builtin
